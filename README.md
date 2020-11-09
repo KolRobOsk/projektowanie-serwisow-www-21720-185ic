@@ -1,1 +1,1 @@
-# Projektowanie-Serwis-w-WWW
+# Projektowanie-Serwisów-WWW
