@@ -20,3 +20,7 @@ Funkcje javascript z html DOM wykorzystane (według kolejności implementacji):
 18) Stworzenie pogrubionego napisu
 19) Stworzenie napisu który zmienia kursor po nakierowaniu myszką
 20) Wypisywanie zawartości zmiennej time
+![image](https://user-images.githubusercontent.com/69192186/129445526-9fc08e83-c38d-449a-9eec-00aad38899a0.png)
+![image](https://user-images.githubusercontent.com/69192186/129445533-7a7a188f-a922-4fae-b2d2-ed484bb2576a.png)
+![image](https://user-images.githubusercontent.com/69192186/129445538-717f8e39-a387-4d60-b0a5-40a14cf316ee.png)
+![image](https://user-images.githubusercontent.com/69192186/129445548-05abac98-913f-4b5d-a98f-948893099e73.png)
