@@ -6,11 +6,57 @@
 	</head>
 	<body>
 		<script src="./Scripts.js"></script>		
-		<button onclick='var imie = prompt("Podaj imię", ""); dzial2zad2(imie);'>Dział 2 Zadanie 2</button>
+		<script src="./zad3_3_users_data.js"></script>		
+		<button id='dzial2zad2' onclick='var imie = prompt("Podaj imię", ""); dzial2zad2(imie);'>Dział 2 Zadanie 2</button>
+		<p id = 'dzial2zad2_text'></p>
 		<br>
-		<button onclick='var file = prompt("Nazwę pliku wraz z rozszerzeniem", ""); dzial2zad3(file);'>Dział 2 Zadanie 3</button>
+		<button id='dzial2zad3' onclick='var file = prompt("Nazwę pliku wraz z rozszerzeniem", ""); dzial2zad3(file);'>Dział 2 Zadanie 3</button>
+		<p id = 'dzial2zad3_text'></p>
 		<br>
-		<button onclick='var name = prompt("Imię", ""); var season = prompt("Pora roku", ""); dzial2zad6(name, season);'>Dział 2 Zadanie 6</button>
-
+		<button id='dzial2zad6' onclick='var name = prompt("Imię", ""); var season = prompt("Miesiąc", ""); dzial2zad6(name, season);'>Dział 2 Zadanie 6</button>
+		<p id = 'dzial2zad6_text'></p>
+		<br>
+		<button id='dzial2zad7' onclick='dzial2zad7()'>Dział 2 Zadanie 7</button>
+		<p id = 'dzial2zad7_text'></p>
+		<br>
+		<button id='dzial3zad1' onclick='dzial3zad1()'>Dział 3 Zadanie 1</button>
+		<p id = 'dzial3zad1_text'></p>	
+		<br>
+		<button id='dzial3zad3pkt1' onclick='dzial3zad3pkt1(users)'>Dział 3 Zadanie 3 Punkt 1</button>
+		<p id = 'dzial3zad3pkt1_text'></p>	
+		<br>
+		<button id='dzial3zad3pkt2' onclick='dzial3zad3pkt2(users)'>Dział 3 Zadanie 3 Punkt 2</button>
+		<p id = 'dzial3zad3pkt2_text'></p>
+		<br>
+		<button id='dzial3zad3pkt3' onclick='dzial3zad3pkt3(users)'>Dział 3 Zadanie 3 Punkt 3</button>
+		<p id = 'dzial3zad3pkt3_text'></p>
+		<br>
+		<button id='dzial3zad3pkt8' onclick='dzial3zad3pkt8(users)'>Dział 3 Zadanie 3 Punkt 8</button>
+		<p id = 'dzial3zad3pkt8_text'></p>
+		<br>
+		<button id='Hello' onclick='prompt("Hello World!", "")'>Hello</button>
+		<p id = 'Hello_text'></p>
+		<script>
+		
+		document.getElementById("dzial2zad2").addEventListener("click", function(){
+		  document.getElementById("dzial2zad2_text").innerHTML = "Zad 2.2 wykonane!";});
+		document.getElementById("dzial2zad3").addEventListener("click", function(){
+		  document.getElementById("dzial2zad3_text").innerHTML = "Zad 2.3 wykonane!";});
+		document.getElementById("dzial2zad6").addEventListener("click", function(){
+		  document.getElementById("dzial2zad6_text").innerHTML = "Zad 2.6 wykonane!";});
+		document.getElementById("dzial2zad7").addEventListener("click", function(){
+		  document.getElementById("dzial2zad7_text").innerHTML = "Zad 2.7 wykonane!";});
+		document.getElementById("dzial3zad1").addEventListener("click", function(){
+		  document.getElementById("dzial3zad1_text").innerHTML = "Zad 3.1 wykonane!";});
+		document.getElementById("dzial3zad3pkt1").addEventListener("click", function(){
+		  document.getElementById("dzial3zad3pkt1_text").innerHTML = "Zad 3.3.1 wykonane!";});
+		document.getElementById("dzial3zad3pkt2").addEventListener("click", function(){
+		  document.getElementById("dzial3zad3pkt2_text").innerHTML = "Zad 3.3.2 wykonane!";});
+		document.getElementById("dzial3zad3pkt3").addEventListener("click", function(){
+		  document.getElementById("dzial3zad3pkt3_text").innerHTML = "Zad 3.3.3 wykonane!";});
+		document.getElementById("dzial3zad3pkt8").addEventListener("click", function(){
+		  document.getElementById("dzial3zad3pkt8_text").innerHTML = "Zad 3.3.8 wykonane!";});
+		document.getElementById("Hello").addEventListener("click", function(){
+		  document.getElementById("Hello_text").innerHTML = "Hello World!";});
+		</script>
 	</body>
-</html>
