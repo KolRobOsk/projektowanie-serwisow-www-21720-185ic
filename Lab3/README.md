@@ -80,9 +80,8 @@ Kod
 
 ![image](https://user-images.githubusercontent.com/69192186/140908082-5b547d26-a35d-4345-b652-7d0962906484.png)
 
-Event Listenery Obsługują przyciski i wyświtelają potwierdzenie wykonania danego zadania po jego uruchomieniu
-oraz dodatkowego przycisku Hello, który wyświetla napis hello world
+Event Listenery (kolejno: click, resize, beforeunload, lcw:onMinimize, lcw:onClose, mouseover_point, mouseout, mousemove, copyText, wheel)
+![image](https://user-images.githubusercontent.com/69192186/143549511-3ec6e8c2-7182-448c-9b7b-f46706a65147.png)
 
-![image](https://user-images.githubusercontent.com/69192186/140908256-2c65909a-867d-4574-af02-bbf468a09a64.png)
 
 
