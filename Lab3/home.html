@@ -11,52 +11,58 @@
 		<p id = 'dzial2zad2_text'></p>
 		<br>
 		<button id='dzial2zad3' onclick='var file = prompt("Nazwę pliku wraz z rozszerzeniem", ""); dzial2zad3(file);'>Dział 2 Zadanie 3</button>
-		<p id = 'dzial2zad3_text'></p>
+		<p id = 'resize_text'></p>
 		<br>
 		<button id='dzial2zad6' onclick='var name = prompt("Imię", ""); var season = prompt("Miesiąc", ""); dzial2zad6(name, season);'>Dział 2 Zadanie 6</button>
-		<p id = 'dzial2zad6_text'></p>
+		<p id = 'reloaded_text'></p>
 		<br>
 		<button id='dzial2zad7' onclick='dzial2zad7()'>Dział 2 Zadanie 7</button>
-		<p id = 'dzial2zad7_text'></p>
+		<p id = 'minimized_text'></p>
 		<br>
 		<button id='dzial3zad1' onclick='dzial3zad1()'>Dział 3 Zadanie 1</button>
-		<p id = 'dzial3zad1_text'></p>	
+		<p id = 'closed_text'></p>	
 		<br>
 		<button id='dzial3zad3pkt1' onclick='dzial3zad3pkt1(users)'>Dział 3 Zadanie 3 Punkt 1</button>
-		<p id = 'dzial3zad3pkt1_text'></p>	
 		<br>
+		Nakieruj mysz powyżej
+		<p id = 'mouseover_point'></p>	
 		<button id='dzial3zad3pkt2' onclick='dzial3zad3pkt2(users)'>Dział 3 Zadanie 3 Punkt 2</button>
-		<p id = 'dzial3zad3pkt2_text'></p>
+		<p id = 'textCopied'></p>
 		<br>
 		<button id='dzial3zad3pkt3' onclick='dzial3zad3pkt3(users)'>Dział 3 Zadanie 3 Punkt 3</button>
-		<p id = 'dzial3zad3pkt3_text'></p>
+		<p id = 'copyText'>Skopiuj Mnie!</p>
 		<br>
 		<button id='dzial3zad3pkt8' onclick='dzial3zad3pkt8(users)'>Dział 3 Zadanie 3 Punkt 8</button>
-		<p id = 'dzial3zad3pkt8_text'></p>
+		<p id = 'MouseMove'></p>
 		<br>
-		<button id='Hello' onclick='prompt("Hello World!", "")'>Hello</button>
-		<p id = 'Hello_text'></p>
+		<button id='Hello' onclick='prompt("Deleted Event!", "")'>Delete Event</button>
+		<p id = 'DeleteEvent'></p>
+		<p id = 'kolko'> </p>
 		<script>
 		
 		document.getElementById("dzial2zad2").addEventListener("click", function(){
 		  document.getElementById("dzial2zad2_text").innerHTML = "Zad 2.2 wykonane!";});
-		document.getElementById("dzial2zad3").addEventListener("click", function(){
-		  document.getElementById("dzial2zad3_text").innerHTML = "Zad 2.3 wykonane!";});
-		document.getElementById("dzial2zad6").addEventListener("click", function(){
-		  document.getElementById("dzial2zad6_text").innerHTML = "Zad 2.6 wykonane!";});
-		document.getElementById("dzial2zad7").addEventListener("click", function(){
-		  document.getElementById("dzial2zad7_text").innerHTML = "Zad 2.7 wykonane!";});
-		document.getElementById("dzial3zad1").addEventListener("click", function(){
-		  document.getElementById("dzial3zad1_text").innerHTML = "Zad 3.1 wykonane!";});
-		document.getElementById("dzial3zad3pkt1").addEventListener("click", function(){
-		  document.getElementById("dzial3zad3pkt1_text").innerHTML = "Zad 3.3.1 wykonane!";});
-		document.getElementById("dzial3zad3pkt2").addEventListener("click", function(){
-		  document.getElementById("dzial3zad3pkt2_text").innerHTML = "Zad 3.3.2 wykonane!";});
-		document.getElementById("dzial3zad3pkt3").addEventListener("click", function(){
-		  document.getElementById("dzial3zad3pkt3_text").innerHTML = "Zad 3.3.3 wykonane!";});
-		document.getElementById("dzial3zad3pkt8").addEventListener("click", function(){
-		  document.getElementById("dzial3zad3pkt8_text").innerHTML = "Zad 3.3.8 wykonane!";});
-		document.getElementById("Hello").addEventListener("click", function(){
-		  document.getElementById("Hello_text").innerHTML = "Hello World!";});
+		
+		function FunkcjaZmianyRozmiaru(){
+		document.getElementById("resize_text").innerHTML = "Zmieniony rozmiar okna!";};
+		window.addEventListener("resize", FunkcjaZmianyRozmiaru());	
+			
+		window.addEventListener("beforeunload", function(){document.getElementById("reloaded_text").innerHTML = "Reloaded!";}, false);
+			
+		window.addEventListener("lcw:onMinimize", function(){document.getElementById("minimized_text").innerHTML = "Minimized!";}); 
+		
+		window.addEventListener("lcw:onClose", function(){ document.getElementById("closed_text").innerHTML = "Closed!";});
+	
+		document.getElementById("dzial3zad3pkt1").addEventListener("mouseover", function(){
+			document.getElementById("mouseover_point").innerHTML = "Nakierowałeś na punkt!";});
+			
+		document.getElementById("DeleteEvent").addEventListener("mouseout", function(){
+		    document.getElementById("resize_text").removeEventListener("click", FunkcjaZmianyRozmiaru());});
+
+		document.addEventListener("mousemove", function() {document.getElementById("MouseMove").innerHTML = "Ruszasz myszą!!";});
+
+		document.addEventListener("copyText", function() {document.getElementById("textCopied").innerHTML = "Kopiujesz text!";});
+	
+		document.getElementById("kolko").addEventListener("wheel",function(){document.getElementById("kolko").innerHTML = "Ruszyłeś rolką od myszy!";});
 		</script>
 	</body>
