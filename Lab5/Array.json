@@ -1,0 +1,23 @@
+{
+	"Tabletop":{
+		"Tabletop_Games":
+			{
+				"Card":"MTG",
+				"Board":
+				{
+						"Random":"Ameri",
+						"Non_Random":"Euro"
+				}			
+				"RPG":"DnD"
+			}
+			"Play_Time_in_minutes":
+			{
+				"Card":{
+					"Min":10,
+					"Max":30
+				},
+				"Board":120,
+				"RPG": 300
+			}
+}
+}
