@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>
+Lab 6 Vue
+</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<!--v-if, v-on -> @, v-for	-->
+<div id="app">
+  <p v-if="isVisible">
+    Coś tam
+  </p>
+  <button @click="toggle">
+    Zmień widoczność!
+  </button>
+  </div>
+  <div id="app2">
+  <li v-for="person in people">
+    {{ person.name }} ma {{ person.age }} lat.
+  </li>
+  <li> Suma wieków osób: {{ partAge }} </li>
+</div>
+<div id="app3">
+  <p v-bind:class="className">Some paragraph</p>
+  <button @click="toggle">Toggle color</button>
+  <input type="text" v-model="inputValue" name="exampleInput">
+  <p>{{ inputValue }}</p>
+</div>
+<div id="app4">
+	<p v-on></p>
+</div>
+<div id="app5">
+	<p v-on></p>
+</div>
+ <!--data, methods-->
+<script>
+new Vue('blog-post', {
+  // camelCase in JavaScript
+  el: '#app5',
+  props: ['title'],
+  template: '<h3>{{ postTitle }}</h3>'
+})
+new Vue({
+  el: '#app4',
+
+  // state
+  data () {
+    return {
+      count: 0
+    }
+  },
+  // view
+  template: `
+    <div>{{ count }}</div>
+  `,
+  // actions
+  methods: {
+    increment () {
+      this.count++
+    }
+  }
+})
+new Vue({
+  el: '#app',
+	data: {
+    isVisible: true,
+  },
+  methods: {
+    toggle () {
+      this.isVisible = !this.isVisible
+    }
+  },
+})	
+new Vue({
+	el: '#app2',
+	data: {
+	people: [
+	{ name: 'John', age: 10 },
+    { name: 'Mark', age: 20 },
+    { name: 'Jeff', age: 30 },
+    ],
+	sum: 0,
+	},
+	computed:{
+		partAge: function(){return this.people[0].age + this.people[1].age + this.people[2].age	;}
+	},
+})
+const app = new Vue({
+  el: '#app3',
+  data: {
+    inputValue: '',
+    className: 'red',
+  },
+  methods: {
+    toggle () {
+      this.className = this.className == 'red' 
+        ? 'blue' 
+        : 'red'
+    }
+  }
+})
+</script>
+</body>
+</html>
